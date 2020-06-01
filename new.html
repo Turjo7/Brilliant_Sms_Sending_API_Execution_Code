@@ -1,0 +1,10 @@
+<?php
+
+$url = "http://163.53.149.2/~brillisms/sms/api?action=send-sms&api_key=enter_your_api_key&to=Enter_Receivers_Number&from=Enter_Sender_Number&sms=your_message";
+$ch = curl_init();
+curl_setopt($ch,CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch,CURLOPT_URL, $url);
+echo curl_exec($ch);
+curl_close($ch);
+
+?>
